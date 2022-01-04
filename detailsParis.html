@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="mystyle.css" />
+  </head>
+  <body>
+    <div>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img
+            src="https://www.jektistravel.com/public/images/image/image_0.30047300-1640345127.png"
+            style="width: 1500px; height: 450px; margin-left: -250px"
+          />
+          <!-- <div class="text">Caption Text</div> -->
+        </div>
+
+        <div class="mySlides fade">
+          <img
+            src="https://www.jektistravel.com/public/images/image/image_0.70462100-1632405798.png"
+            style="width: 1500px; height: 450px; margin-left: -250px"
+          />
+          <!-- <div class="text">Caption Two</div> -->
+        </div>
+
+        <div class="mySlides fade">
+          <img
+            src="https://www.jektistravel.com/public/images/image/image_0.00447600-1640345129.png"
+            style="width: 1500px; height: 450px; margin-left: -250px"
+          />
+          <!-- <div class="text">Caption Three</div> -->
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+    <button class="btn">
+      <a href="#regForm"> Reserver </a>
+    </button>
+    <br />
+    <br />
+    <div class="tabb">
+      <button class="tablinks" onclick="openCity(event, 'Details')">
+        Details
+      </button>
+      <button class="tablinks" onclick="openCity(event, 'Programme')">
+        Programme
+      </button>
+    </div>
+
+    <div id="Details" class="tabcontent">
+      <h3>Details</h3>
+      <h6>
+        <li>5 nuits et 6 jours a Paris. A partir de</li>
+        <li>
+          <strong> 2500 dt </strong> par personne avec possibilité des facilités
+          de paiement s’étalant sur quatre mois, avec un paiement d’une avance
+          de 500 dt par personne.
+        </li>
+        <br />Faites vite ! Les places sont limitées !
+      </h6>
+      <br />
+      <table>
+        <tr>
+          <td><h4>Départ de :</h4></td>
+          <td><p>Aéroport de Tunis-Carthage</p></td>
+        </tr>
+        <tr>
+          <td><h4>Le prix comprend :</h4></td>
+          <td>
+            <li>Le billet d’avion</li>
+            <li>Le logement avec petit déjeuner pendant le voyage</li>
+            <li>Transport par bus touristique climatisé.</li>
+            <li>Les visites et excursions mentionnées dans le programme</li>
+            <li>Guide touristique 24/7</li>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="Programme" class="tabcontent">
+      <h4>Jr 1</h4>
+      <p>
+        Départ de l'aéroport Tunis Carthage vers Ibiza via Madrid ou Barcelone.
+        A l'arrivée, transfert à votre hôtel à Paris
+      </p>
+      <hr />
+
+      <h4>jr 2</h4>
+      <p>
+        Départ en excursion par bus pour une visite guidée de la ville. (les
+        champs Elysées, Tour Eiffel, Trocadéro, l’institut du monde arabe,grand
+        mosquée de Paris, opéra de paris ,st Michel). Nuit à l’hôtel.
+      </p>
+      <hr />
+
+      <h4>Jr 3</h4>
+      <p>
+        Journée libre pour shopping aux grands centres commerciaux de la
+        capitale (les quatres temps, val d’Europe, le soleil,….) Soirée libre
+        pour vous laisser le temps d’admirer le charme de st Michel,son quartier
+        latin , la célèbre cathédrale Notre-Dame de paris ,l’hôtel de ville ,
+        les halles ainsi que le centre Pompidou .
+      </p>
+      <hr />
+
+      <h4>Jr 4</h4>
+      <p>
+        Journée libre ou possibilité de passer une journée entière, et admirer
+        les spectacles et parades du Parc Disneyland, qui sont l'opportunité
+        d'en prendre plein les yeux en vivant des moments magnifiques , et
+        inoubliables.
+      </p>
+      <hr />
+
+      <h4>Jr 5</h4>
+      <p>Journée libre .</p>
+      <hr />
+      <h4>Jr 6</h4>
+      <p>
+        Matinée libre. <br />
+        Après-midi transfert vers l’aéroport pour retourner à Tunis
+      </p>
+      <hr />
+    </div>
+    <form id="regForm">
+      <h1>Reservation :</h1>
+      <!-- One "tab" for each step in the form: -->
+      <div class="tab">
+        Date aller:
+        <p>
+          <input type="date" oninput="this.className = ''" name="fname" />
+        </p>
+        Date Retour:
+        <p><input type="date" oninput="this.className = ''" name="lname" /></p>
+      </div>
+      <div class="tab">
+        Contact Info:
+        <p>
+          <input
+            placeholder="Nom ..."
+            oninput="this.className = ''"
+            name="name"
+          />
+        </p>
+        <p>
+          <input
+            placeholder="Prénom..."
+            oninput="this.className = ''"
+            name="last name"
+          />
+        </p>
+        <p>
+          <input
+            placeholder="E-mail..."
+            oninput="this.className = ''"
+            name="email"
+          />
+        </p>
+        <p>
+          <input
+            placeholder="Phone..."
+            oninput="this.className = ''"
+            name="phone"
+          />
+        </p>
+      </div>
+      <div class="tab">
+        Nombre de passagers :
+        <p>
+          <select class="custom-select">
+            <option selected value="0">Nombre d'adultes :</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <select class="custom-select">
+            <option selected value="0">Nombre d'enfants :</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </p>
+      </div>
+      <div style="overflow: auto">
+        <div style="float: right">
+          <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+            Previous
+          </button>
+          <button
+            type="button"
+            class="btnstep"
+            id="nextBtn"
+            onclick="nextPrev(1)"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+      <!-- Circles which indicates the steps of the form: -->
+      <div style="text-align: center; margin-top: 40px">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+    </form>
+    <button class="btn">
+      <a href="#Details" onclick="openCity(event, 'Details')">
+        Voir details de voyage
+      </a>
+    </button>
+    <script src="myscript.js"></script>
+  </body>
+</html>
